@@ -1,6 +1,7 @@
 // Import libraries
 import React from 'react';
 
+// Displays message if no photos return from search
 function PhotosNotFound(){
     return(
         <div className="not-found">

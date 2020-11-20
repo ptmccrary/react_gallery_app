@@ -2,6 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Display Nav links to 3 default topics
 function Nav() {
     return(
         <nav className="main-nav">

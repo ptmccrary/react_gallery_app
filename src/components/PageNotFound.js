@@ -1,6 +1,7 @@
 // Import libraries
 import React from 'react';
 
+// Display 404 Error
 const PageNotFound = () => (
     <div className="error-container">
         <h2>ERROR 404</h2>

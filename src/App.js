@@ -19,6 +19,8 @@ import PhotoContainer from './components/PhotoContainer';
 import PageNotFound from './components/PageNotFound';
 
 class App extends Component {
+  
+  // Behavioral props
   state = {
     images: [],
     query: '',
@@ -28,6 +30,7 @@ class App extends Component {
     hypebeast: []
   }
 
+  // Func for fetching the data from Flickr
   searchImages = (query) => {
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&text=${query}&per_page=24&format=json&nojsoncallback=1`)
       .then(res => {
@@ -47,12 +50,14 @@ class App extends Component {
       .catch(err => { console.log('Error fetching data', err) });
   }
 
+  // Run after first render lifecycle
   componentDidMount() {
     this.searchImages('naruto');
     this.searchImages('fitness');
     this.searchImages('hypebeast');
   }
   
+  // Render HTML
   render() {
     return (
       <BrowserRouter>
