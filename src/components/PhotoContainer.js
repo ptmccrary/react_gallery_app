@@ -1,7 +1,7 @@
 // Import libraries
 import React, { Component } from 'react';
 import Photo from './Photo';
-import PageNotFound from './PageNotFound';
+import PhotosNotFound from './PhotosNotFound';
 
 class PhotoContainer extends Component {
     getPhotos() {
@@ -11,7 +11,7 @@ class PhotoContainer extends Component {
         if(results.length > 0) {
             images = results.map(image => <Photo url={`https://live.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`} key={image.id} />);
         } else {
-            images = <PageNotFound />;
+            images = <PhotosNotFound />;
         }
         
         return images;
