@@ -27,11 +27,16 @@ a {
 
 .search-form button {
   outline: none;
-  background-color: #438bbd;
+  background-color: black;
+  color: white;
   border: none;
   padding: 0px 15px;
   border-radius: 0 0.35em 0.35em 0;
   cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: grey;
 }
 
 input {
@@ -52,16 +57,18 @@ input {
 
 .main-nav a {
   display: block;
-  background: #438bbd;
+  background: black;
   border-radius: 3px;
   padding: 5px;
   color: #fff;
 }
 
-.main-nav .active,
-.main-nav a:hover,
-.search-form button:hover {
-  background-color: #275270;
+.main-nav .active {
+  border: 3px solid red;
+}
+
+.main-nav a:hover {
+  background-color: grey;
 }
 
 .photo-container ul {
